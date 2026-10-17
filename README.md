@@ -1,16 +1,128 @@
-# React + Vite
+# React praktinis darbas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vilniaus kolegijos (VIKO) praktinis darbas, skirtas React bibliotekos pagrindams įsisavinti.
 
-Currently, two official plugins are available:
+Projektą sudaro trys savarankiškos dalys (A, B ir C), sujungtos į vieną React programą su bendru pradžios puslapiu (*Dashboard*).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologijos
 
-## React Compiler
+- **React** – vartotojo sąsajos komponentai
+- **JavaScript (JSX)** – programos logika ir komponentų struktūra
+- **Vite** – projekto kūrimo ir paleidimo aplinka
+- **CSS** – vartotojo sąsajos stilius, pritaikytas VIKO vizualiniam identitetui
+- **ESLint** – kodo kokybės tikrinimas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Naudojami funkciniai komponentai, `props` ir `useState`. Papildomos vykdymo bibliotekos bei `useEffect` nenaudojami.
 
-## Expanding the ESLint configuration
+## Praktinio darbo dalys
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Dalis | Pavadinimas | Būsena | Dokumentacija |
+|---|---|---|---|
+| A | Užduočių sąrašas | Įgyvendinta | [README_part_A.md](README_part_A.md) |
+| B | Krepšelio sistema | Planuojama | Bus pridėta |
+| C | Trečioji užduotis | Planuojama | Bus pridėta |
+
+### A dalis – Užduočių sąrašas
+
+Užduočių valdymo programa, leidžianti:
+
+- Pridėti užduotį mygtuku arba paspaudus `Enter`.
+- Patikrinti įvestį ir neleisti pridėti tuščios užduoties.
+- Pažymėti užduotį kaip atliktą.
+- Vizualiai atskirti atliktas užduotis.
+- Ištrinti pasirinktą užduotį.
+- Matyti tuščio sąrašo pranešimą.
+
+**Komponentai:** `TaskList`, `TaskForm`, `TaskItem`.
+
+Išsamus aprašymas: [A dalies dokumentacija](README_part_A.md).
+
+## Projekto struktūra
+
+```text
+react-practical/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Dashboard.jsx
+│   │   └── TaskCard.jsx
+│   ├── tasks/
+│   │   ├── TaskList.jsx
+│   │   ├── TaskForm.jsx
+│   │   ├── TaskItem.jsx
+│   │   └── tasks.css
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── README.md
+├── README_part_A.md
+├── package.json
+└── vite.config.js
+```
+
+Projekto struktūra bus plečiama įgyvendinant B ir C dalis.
+
+## Diegimas ir paleidimas
+
+**Reikalavimai:** Node.js ir npm, suderinami su naudojama Vite versija.
+
+### 1. Atsisiųskite projektą
+
+```bash
+git clone https://github.com/PI24SN-kestutis/react-practical.git
+cd react-practical
+```
+
+### 2. Įdiekite priklausomybes
+
+```bash
+npm install
+```
+
+### 3. Paleiskite kūrimo serverį
+
+```bash
+npm run dev
+```
+
+Atidarykite terminale nurodytą adresą, paprastai:
+
+`http://localhost:5173/`
+
+## Kodo kokybės tikrinimas
+
+ESLint patikra:
+
+```bash
+npm run lint
+```
+
+Produkcinės versijos surinkimas:
+
+```bash
+npm run build
+```
+
+## Architektūra
+
+Projektas paremtas komponentine React architektūra.
+
+- Vienas komponentas – vienas failas.
+- Būsena valdoma naudojant `useState`.
+- Duomenys ir įvykių apdorojimo funkcijos perduodami per `props`.
+- Naudojami JSX, sąlyginis atvaizdavimas ir sąrašų generavimas.
+- Komponentų ir kintamųjų pavadinimai rašomi anglų kalba.
+- Vartotojo sąsajos tekstai pateikiami lietuvių kalba.
+
+## Vartotojo sąsaja
+
+Programa naudoja VIKO vizualinio identiteto spalvas ir prisitaikantį (*responsive*) CSS dizainą.
+
+Pradiniame Dashboard puslapyje pateikiamos trijų praktinio darbo dalių kortelės.
+
+## Duomenų saugojimas
+
+Šiuo metu duomenys saugomi React komponentų būsenoje. Atnaujinus puslapį, jie atkuriami į pradinę būseną.
+
+Duomenų bazė ir
