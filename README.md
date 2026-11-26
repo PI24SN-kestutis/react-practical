@@ -19,7 +19,7 @@ Naudojami funkciniai komponentai, `props` ir `useState`. Papildomos vykdymo bibl
 | Dalis | Pavadinimas | Būsena | Dokumentacija |
 |---|---|---|---|
 | A | Užduočių sąrašas | Įgyvendinta | [README_part_A.md](README_part_A.md) |
-| B | Krepšelio sistema | Planuojama | Bus pridėta |
+| B | Krepšelio sistema | Įgyvendinta | [README_part_B.md](README_part_B.md) |
 | C | Trečioji užduotis | Planuojama | Bus pridėta |
 
 ### A dalis – Užduočių sąrašas
@@ -37,6 +37,20 @@ Užduočių valdymo programa, leidžianti:
 
 Išsamus aprašymas: [A dalies dokumentacija](README_part_A.md).
 
+### B dalis – Krepšelio sistema
+
+Prekių sąrašas ir krepšelis, leidžiantys:
+
+- Pridėti prekę į krepšelį.
+- Pakartotinai pridėjus tą pačią prekę, didinti jos kiekį, nekuriant naujos eilutės.
+- Matyti vieneto kainą, kiekį, eilutės sumą ir bendrą kainą.
+- Pašalinti prekės eilutę ir matyti perskaičiuotą kainą.
+- Matyti pranešimą „Krepšelis tuščias.“ ir `0,00 Eur`, kai krepšelis tuščias.
+
+**Komponentai:** `ShoppingApp`, `ProductList`, `ProductItem`, `Cart`.
+
+Išsamus aprašymas: [B dalies dokumentacija](README_part_B.md).
+
 ## Projekto struktūra
 
 ```text
@@ -51,17 +65,24 @@ react-practical/
 │   │   ├── TaskForm.jsx
 │   │   ├── TaskItem.jsx
 │   │   └── tasks.css
+│   ├── shopping/
+│   │   ├── ShoppingApp.jsx
+│   │   ├── ProductList.jsx
+│   │   ├── ProductItem.jsx
+│   │   ├── Cart.jsx
+│   │   └── shopping.css
 │   ├── App.jsx
 │   ├── App.css
 │   ├── index.css
 │   └── main.jsx
 ├── README.md
 ├── README_part_A.md
+├── README_part_B.md
 ├── package.json
 └── vite.config.js
 ```
 
-Projekto struktūra bus plečiama įgyvendinant B ir C dalis.
+Projekto struktūra bus plečiama įgyvendinant C dalį.
 
 ## Diegimas ir paleidimas
 
