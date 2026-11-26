@@ -1,0 +1,130 @@
+.shopping-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.shopping-page h1 {
+    color: var(--viko-dark, #2e3642);
+}
+
+.shopping-page > p {
+    color: #667085;
+}
+
+.shopping-panel {
+    background: white;
+    border: 1px solid #dfe5eb;
+    border-radius: 10px;
+    padding: 24px;
+    margin-top: 24px;
+}
+
+.shopping-panel h2 {
+    margin: 0;
+}
+
+/* Prekių sąrašas */
+
+.product-list,
+.cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product-item,
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #dfe5eb;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.product-info,
+.cart-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.product-name,
+.cart-name {
+    font-weight: 600;
+}
+
+.product-price {
+    color: #667085;
+}
+
+.cart-info span:not(.cart-name) {
+    color: #667085;
+    font-size: 14px;
+}
+
+/* Mygtukai */
+
+.add-button,
+.remove-button {
+    padding: 9px 14px;
+    border-radius: 6px;
+    font: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.add-button {
+    background: #005baa;
+    border: none;
+    color: white;
+}
+
+.add-button:hover {
+    background: #004780;
+}
+
+.remove-button {
+    background: #fff1f0;
+    border: 1px solid #f4c7c3;
+    color: #b42318;
+}
+
+.remove-button:hover {
+    background: #fde4e1;
+}
+
+/* Krepšelis */
+
+.cart-empty {
+    text-align: center;
+    color: #667085;
+    padding: 30px 0 10px;
+}
+
+.cart-total {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 2px solid #dfe5eb;
+    text-align: right;
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .product-item,
+    .cart-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .add-button,
+    .remove-button {
+        width: 100%;
+    }
+}
