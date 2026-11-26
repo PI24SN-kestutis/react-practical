@@ -1,5 +1,6 @@
 function TaskCard({ task, onOpen }) {
-    const available = task.id === 'a';
+    // Kol C dalis neįgyvendinta, atidaryti galima tik A ir B dalis.
+    const available = task.id === 'a' || task.id === 'b';
 
     return (
         <article className="task-card">

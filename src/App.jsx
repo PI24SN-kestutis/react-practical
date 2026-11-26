@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Dashboard from './components/Dashboard';
 import TaskList from './tasks/TaskList';
+import ShoppingApp from './shopping/ShoppingApp';
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                     </div>
 
                     {currentPage === 'a' && <TaskList />}
+                    {currentPage === 'b' && <ShoppingApp />}
                 </>
             )}
         </>
