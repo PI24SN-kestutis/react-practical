@@ -1,0 +1,111 @@
+.guess-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.guess-page h1 {
+    color: var(--viko-dark, #2e3642);
+}
+
+.guess-page > p {
+    color: #667085;
+}
+
+.guess-panel {
+    background: white;
+    border: 1px solid #dfe5eb;
+    border-radius: 10px;
+    padding: 24px;
+    margin-top: 24px;
+}
+
+/* Spėjimo forma */
+
+.guess-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.guess-form label {
+    font-weight: 600;
+}
+
+.guess-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.guess-controls input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.guess-controls input:focus {
+    outline: 2px solid #005baa;
+    outline-offset: 1px;
+}
+
+.guess-controls button {
+    padding: 12px 20px;
+    background: #005baa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.guess-controls button:hover:not(:disabled) {
+    background: #004780;
+}
+
+.guess-controls input:disabled,
+.guess-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Pranešimai */
+
+.guess-message {
+    margin: 20px 0 0;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.guess-message-error {
+    background: #fff1f0;
+    border: 1px solid #f4c7c3;
+    color: #b42318;
+}
+
+.guess-message-hint {
+    background: #eef5fc;
+    border: 1px solid #b9d4ee;
+    color: #004780;
+}
+
+.guess-message-success {
+    background: #e8f5ed;
+    border: 1px solid #b7dfca;
+    color: #17653c;
+}
+
+/* Bandymų skaičius */
+
+.guess-attempts {
+    margin: 20px 0 0;
+    color: #667085;
+}
+
+@media (max-width: 600px) {
+    .guess-controls {
+        flex-direction: column;
+    }
+}
