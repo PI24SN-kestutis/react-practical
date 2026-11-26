@@ -3,6 +3,8 @@ import ProductList from './ProductList';
 import Cart from './Cart';
 import './shopping.css';
 
+
+// saugosime prekes ir krepšelį su useState.
 function ShoppingApp() {
     const [products] = useState([
         { id: 1, name: 'Nešiojamasis kompiuteris', price: 799.99 },
