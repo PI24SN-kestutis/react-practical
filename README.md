@@ -20,7 +20,7 @@ Naudojami funkciniai komponentai, `props` ir `useState`. Papildomos vykdymo bibl
 |---|---|---|---|
 | A | Užduočių sąrašas | Įgyvendinta | [README_part_A.md](README_part_A.md) |
 | B | Krepšelio sistema | Įgyvendinta | [README_part_B.md](README_part_B.md) |
-| C | Trečioji užduotis | Planuojama | Bus pridėta |
+| C | Skaičių spėjimo žaidimas | Įgyvendinta | [README_part_C.md](README_part_C.md) |
 
 ### A dalis – Užduočių sąrašas
 
@@ -51,6 +51,19 @@ Prekių sąrašas ir krepšelis, leidžiantys:
 
 Išsamus aprašymas: [B dalies dokumentacija](README_part_B.md).
 
+### C dalis – Skaičių spėjimo žaidimas
+
+Žaidimas, kuriame reikia atspėti slaptą sveikąjį skaičių nuo 1 iki 100:
+
+- Spėti galima mygtuku arba paspaudus `Enter`.
+- Netinkama įvestis (tuščia, neskaitinė, trupmeninė, už intervalo) rodo klaidą ir nedidina bandymų skaičiaus.
+- Tinkami spėjimai skaičiuojami, o užuominos rodo „Bandyk mažesnį“ arba „Bandyk didesnį“.
+- Atspėjus rodoma „Teisingai!“, o įvestis ir mygtukas išjungiami.
+
+**Komponentai:** `GuessGame`, `GuessForm`, `Message`.
+
+Išsamus aprašymas: [C dalies dokumentacija](README_part_C.md).
+
 ## Projekto struktūra
 
 ```text
@@ -71,6 +84,11 @@ react-practical/
 │   │   ├── ProductItem.jsx
 │   │   ├── Cart.jsx
 │   │   └── shopping.css
+│   ├── guess/
+│   │   ├── GuessGame.jsx
+│   │   ├── GuessForm.jsx
+│   │   ├── Message.jsx
+│   │   └── guess.css
 │   ├── App.jsx
 │   ├── App.css
 │   ├── index.css
@@ -78,11 +96,12 @@ react-practical/
 ├── README.md
 ├── README_part_A.md
 ├── README_part_B.md
+├── README_part_C.md
 ├── package.json
 └── vite.config.js
 ```
 
-Projekto struktūra bus plečiama įgyvendinant C dalį.
+Projektą sudaro trys įgyvendintos dalys: A, B ir C.
 
 ## Diegimas ir paleidimas
 
