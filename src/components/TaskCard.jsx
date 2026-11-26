@@ -1,7 +1,4 @@
 function TaskCard({ task, onOpen }) {
-    // Kol C dalis neįgyvendinta, atidaryti galima tik A ir B dalis.
-    const available = task.id === 'a' || task.id === 'b';
-
     return (
         <article className="task-card">
             <div className="task-icon">
@@ -17,7 +14,6 @@ function TaskCard({ task, onOpen }) {
 
             <button
                 type="button"
-                disabled={!available}
                 onClick={onOpen}
             >
                 Atidaryti

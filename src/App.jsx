@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Dashboard from './components/Dashboard';
 import TaskList from './tasks/TaskList';
 import ShoppingApp from './shopping/ShoppingApp';
+import GuessGame from './guess/GuessGame';
 import './App.css';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
 
                     {currentPage === 'a' && <TaskList />}
                     {currentPage === 'b' && <ShoppingApp />}
+                    {currentPage === 'c' && <GuessGame />}
                 </>
             )}
         </>
